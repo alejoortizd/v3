@@ -53,7 +53,7 @@ def post():
 
 @app_views.route('/states/<string:state_id>', methods=['PUT'],
                 strict_slashes=False)
-def put():
+def put(state_id):
     """function or route that update a state"""
     idstate = storage.get("State", state_id)
     if idstate is None:
