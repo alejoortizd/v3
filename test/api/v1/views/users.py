@@ -26,7 +26,7 @@ def userid(user_id):
     return jsonify(iduser.to_dict())
 
 
-@app_views.route('/amenitites/<string:user_id>', methods=['DELETE'],
+@app_views.route('/user/<string:user_id>', methods=['DELETE'],
                  strict_slashes=False)
 def delete(user_id):
     """delete user"""
