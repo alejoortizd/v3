@@ -55,7 +55,7 @@ def post():
 
 @app_views.route('/users/<string:user_id>', methods=['PUT'],
                 strict_slashes=False)
-def put():
+def put(user_id):
     """function or route that update an amenity"""
     iduser = storage.get("User", user_id)
     if iduser is None:
