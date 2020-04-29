@@ -7,10 +7,10 @@ from models import storage
 from models.user import User
 
 
-@app_views.route('/amenities', methods=['GET'],
+@app_views.route('/users', methods=['GET'],
                 strict_slashes=False)
 def amenities():
-    """get all amenitites in a list"""
+    """get all users in a list"""
     list_users = []
     for nameUser in storage.all("User").values():
         list_users.append(nameUser.to_dict())
